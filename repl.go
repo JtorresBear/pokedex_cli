@@ -5,10 +5,13 @@ import (
 	"fmt"
 	"os"
 	"strings"
+
+	"github.com/JtorresBear/pokedex_cli/internal/pokeapi"
 )
 
 type config struct {
 	commands     map[string]cliCommand
+	client       pokeapi.Client
 	nextPage     *string
 	previousPage *string
 }

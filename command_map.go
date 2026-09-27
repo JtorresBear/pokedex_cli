@@ -2,8 +2,6 @@ package main
 
 import (
 	"fmt"
-
-	"github.com/JtorresBear/pokedex_cli/internal/pokeapi"
 )
 
 func commandMap(cfg *config) error {
@@ -11,7 +9,7 @@ func commandMap(cfg *config) error {
 		fmt.Println("You're on the last page")
 		return nil
 	}
-	locations, err := pokeapi.GetLocations(*cfg.nextPage)
+	locations, err := cfg.client.GetLocations(*cfg.nextPage)
 	if err != nil {
 		return err
 	}
@@ -32,7 +30,7 @@ func commandMapB(cfg *config) error {
 		fmt.Println("You're on the first page")
 		return nil
 	}
-	locations, err := pokeapi.GetLocations(*cfg.previousPage)
+	locations, err := cfg.client.GetLocations(*cfg.previousPage)
 	if err != nil {
 		return err
 	}

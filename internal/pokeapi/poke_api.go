@@ -6,6 +6,9 @@ import (
 	"net/http"
 )
 
+type Client struct {
+}
+
 type locationsArea struct {
 	Count    int     `json:"count"`
 	Next     *string `json:"next"`
@@ -16,7 +19,7 @@ type locationsArea struct {
 	} `json:"results"`
 }
 
-func GetLocations(url string) (locationsArea, error) {
+func (_ Client) GetLocations(url string) (locationsArea, error) {
 	res, err := http.Get(url)
 	if err != nil {
 		return locationsArea{}, err
