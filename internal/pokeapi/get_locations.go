@@ -5,29 +5,7 @@ import (
 	"fmt"
 	"io"
 	"net/http"
-
-	"github.com/JtorresBear/pokedex_cli/internal/pokecache"
 )
-
-type Client struct {
-	Cache *pokecache.Cache
-}
-
-type locationsArea struct {
-	Count    int     `json:"count"`
-	Next     *string `json:"next"`
-	Previous *string `json:"previous"`
-	Results  []struct {
-		Name string `json:"name"`
-		URL  string `json:"url"`
-	} `json:"results"`
-}
-
-func NewClient(cache *pokecache.Cache) *Client {
-	return &Client{
-		Cache: cache,
-	}
-}
 
 func (c Client) GetLocations(url string) (locationsArea, error) {
 	cache, ok := c.Cache.Get(url)

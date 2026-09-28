@@ -27,7 +27,7 @@ func commandMap(cfg *config) error {
 
 func commandMapB(cfg *config) error {
 	if cfg.previousPage == nil {
-		fmt.Println("You're on the first page")
+		fmt.Println("You're on the first page or you haven't started yet.")
 		return nil
 	}
 	locations, err := cfg.client.GetLocations(*cfg.previousPage)

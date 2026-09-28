@@ -8,7 +8,8 @@ import (
 )
 
 func main() {
-	initialPage := "https://pokeapi.co/api/v2/location-area/?limit=20"
+	initialPage := pokeapi.BaseURL + "location-area/?limit=20"
+
 	cache := pokecache.NewCache(5 * time.Second)
 	client := pokeapi.NewClient(cache)
 	cfg := &config{
