@@ -11,7 +11,7 @@ import (
 
 type config struct {
 	commands     map[string]cliCommand
-	client       pokeapi.Client
+	client       *pokeapi.Client
 	nextPage     *string
 	previousPage *string
 }
