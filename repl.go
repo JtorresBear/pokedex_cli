@@ -28,9 +28,9 @@ func startRepl(cfg *config) {
 		fmt.Print("Pokedex > ")
 		if !scanner.Scan() {
 			if err := scanner.Err(); err != nil {
-				fmt.Printf("there was an error: %v", err)
-				break
+				fmt.Printf("there was an error: %v\n", err)
 			}
+			break
 		}
 		input := scanner.Text()
 		words := cleanInput(input)
@@ -96,6 +96,11 @@ func getCommands() map[string]cliCommand {
 			name:        "inspect",
 			description: "You can view caught pokemon",
 			callback:    commandInspect,
+		},
+		"pokedex": {
+			name:        "pokedex",
+			description: "View all the Pokemon you caught!",
+			callback:    commandPokedex,
 		},
 	}
 }
