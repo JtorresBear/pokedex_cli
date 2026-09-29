@@ -52,10 +52,6 @@ func (c *Cache) Add(key string, val []byte) {
 
 }
 
-//Create a cache.Get() method that gets an entry from the cache.
-// It should take a key (a string)and return a []byte and a bool.
-// The bool should be true if the entry was found and false if it wasn't.
-
 func (c *Cache) Get(key string) ([]byte, bool) {
 	c.mu.Lock()
 	defer c.mu.Unlock()

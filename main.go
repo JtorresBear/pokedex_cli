@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	initialPage := pokeapi.BaseURL + "location-area/?limit=20"
+	initialPage := pokeapi.BaseURL + "?limit=20"
 
 	cache := pokecache.NewCache(5 * time.Second)
 	client := pokeapi.NewClient(cache)
@@ -16,6 +16,7 @@ func main() {
 		commands: getCommands(),
 		nextPage: &initialPage,
 		client:   client,
+		pokedex:  make(map[string]pokeapi.Pokemon),
 	}
 	startRepl(cfg)
 }
