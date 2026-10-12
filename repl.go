@@ -25,7 +25,7 @@ type cliCommand struct {
 func startRepl(cfg *config) {
 	scanner := bufio.NewScanner(os.Stdin)
 	for {
-		fmt.Print("Pokedex > ")
+		fmt.Print("\n\033[32mPokedex > \033[0m")
 		if !scanner.Scan() {
 			if err := scanner.Err(); err != nil {
 				fmt.Printf("there was an error: %v\n", err)

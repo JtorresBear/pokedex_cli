@@ -17,6 +17,7 @@ func commandInspect(cfg *config, args []string) error {
 		fmt.Println("you have not caught that pokemon")
 		return nil
 	}
+	fmt.Println()
 	fmt.Println("Name: " + pokemon.Name)
 	fmt.Printf("Height: %v\n", pokemon.Height)
 	fmt.Printf("Weight: %v\n", pokemon.Weight)

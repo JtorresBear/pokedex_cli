@@ -8,7 +8,7 @@ func commandPokedex(cfg *config, _ []string) error {
 		fmt.Println("Your pokedex is empty. you have to catch some pokemon")
 		return nil
 	}
-
+	fmt.Printf("\nPokemon Caught\n")
 	for pokemon := range caughtPokemon {
 		fmt.Println(pokemon)
 	}

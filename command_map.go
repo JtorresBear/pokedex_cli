@@ -17,7 +17,7 @@ func commandMap(cfg *config, _ []string) error {
 	cfg.nextPage = locations.Next
 
 	cfg.previousPage = locations.Previous
-
+	fmt.Println()
 	for _, location := range locations.Results {
 		fmt.Println(location.Name)
 	}
@@ -38,6 +38,7 @@ func commandMapB(cfg *config, _ []string) error {
 
 	cfg.previousPage = locations.Previous
 
+	fmt.Println()
 	for _, location := range locations.Results {
 		fmt.Println(location.Name)
 	}
