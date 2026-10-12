@@ -8,7 +8,7 @@ func commandHelp(cfg *config, _ []string) error {
 	fmt.Println("Usage:")
 	fmt.Println()
 	for _, cmd := range cfg.commands {
-		fmt.Printf("%s: %s\n", cmd.name, cmd.description)
+		fmt.Printf("%-10s %s\n", cmd.name, cmd.description)
 	}
 	fmt.Println()
 	return nil
