@@ -13,6 +13,18 @@ Users can attempt to catch Pokémon and add them to their personal Pokédex. The
 - Inspect caught Pokémon to view their stats and types.
 - Cache API responses to reduce unnecessary requests.
 
+## Screenshots
+
+### Exploring and Catching Pokémon
+![Exploring and catching Pokemon](images/Catching_exploring_pokemon.png)
+
+### Available Commands
+![Pokedex help menu](images/Help_Menu.png)
+
+### Inspecting Pokémon
+![Inspecting Pokemon](images/Inspect_Pokemon.png)
+
+
 ## Prerequisites
 
 Before running Pokédex CLI, make sure you have:
