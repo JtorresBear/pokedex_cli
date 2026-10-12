@@ -10,7 +10,7 @@ import (
 func main() {
 	initialPage := pokeapi.BaseURL + "?limit=20"
 
-	cache := pokecache.NewCache(5 * time.Second)
+	cache := pokecache.NewCache(120 * time.Second)
 	client := pokeapi.NewClient(cache)
 	cfg := &config{
 		commands: getCommands(),

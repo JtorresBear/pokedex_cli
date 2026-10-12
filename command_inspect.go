@@ -9,6 +9,7 @@ import (
 func commandInspect(cfg *config, args []string) error {
 	if len(args) == 0 {
 		fmt.Println("You need to provide a pokemon")
+		fmt.Println("Try inspect <pokemon name>")
 		return nil
 	}
 	pokemon, ok := cfg.pokedex[args[0]]

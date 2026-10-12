@@ -7,9 +7,9 @@ import (
 )
 
 func commandExplore(cfg *config, args []string) error {
-	fmt.Println("explore was called")
 	if len(args) == 0 {
 		fmt.Println("You need to add an area after \"explore\"")
+		fmt.Println("Try explore <location-name>")
 		return nil
 	}
 	locationURL := pokeapi.BaseURL + args[0]
